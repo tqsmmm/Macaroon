@@ -1,0 +1,48 @@
+﻿<Page x:Class="马卡龙零售店.Statistic_Members"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d"
+      FontFamily="Microsoft YaHei" FontSize="15" Loaded="Page_Loaded">
+    <DockPanel>
+        <Grid Width="300">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Label Name="tb_Back" Content="返回" Background="Orange" MouseLeftButtonUp="tb_Back_MouseLeftButtonUp"/>
+        </Grid>
+        <ListView Name="lv_Members" Background="Blue" ItemsSource="{Binding}">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Background="White">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="120"/>
+                            <ColumnDefinition Width="120"/>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="80"/>
+                            <ColumnDefinition Width="80"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="200"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="{Binding Code}"/>
+                        <TextBlock Text="{Binding Name}" HorizontalAlignment="Center" Grid.Column="1"/>
+                        <TextBlock Text="{Binding Mobile}" HorizontalAlignment="Center" Grid.Column="2"/>
+                        <CheckBox IsChecked="{Binding Membered}" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="3"/>
+                        <TextBlock Text="{Binding Discount}" HorizontalAlignment="Center" Grid.Column="4"/>
+                        <TextBlock Text="{Binding Balance}" HorizontalAlignment="Right" Grid.Column="5"/>
+                        <TextBlock Text="{Binding DateTime}" HorizontalAlignment="Center" Grid.Column="6"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListView>
+    </DockPanel>
+</Page>

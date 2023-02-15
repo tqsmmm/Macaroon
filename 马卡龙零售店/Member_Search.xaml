@@ -1,0 +1,47 @@
+﻿<Window x:Class="马卡龙零售店.Member_Search"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        FontFamily="Microsoft YaHei" FontSize="15" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" SizeToContent="WidthAndHeight" Loaded="Window_Loaded" Topmost="True" ShowInTaskbar="False">
+    <DockPanel>
+        <Grid VerticalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="会员编码："/>
+            <TextBox Name="tbMember_Code" Grid.Row="1"/>
+            <TextBlock Text="会员电话：" Grid.Row="2"/>
+            <TextBox Name="tbMember_Mobile" Grid.Row="3"/>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+            <Label Name="l_1" Background="Blue" Content="1" MouseLeftButtonUp="l_1_MouseLeftButtonUp"/>
+            <Label Name="l_2" Background="Blue" Content="2" Grid.Column="1" MouseLeftButtonUp="l_2_MouseLeftButtonUp"/>
+            <Label Name="l_3" Background="Blue" Content="3" Grid.Column="2" MouseLeftButtonUp="l_3_MouseLeftButtonUp"/>
+            <Label Name="l_4" Background="Blue" Content="4" Grid.Row="1" MouseLeftButtonUp="l_4_MouseLeftButtonUp"/>
+            <Label Name="l_5" Background="Blue" Content="5" Grid.Row="1" Grid.Column="1" MouseLeftButtonUp="l_5_MouseLeftButtonUp"/>
+            <Label Name="l_6" Background="Blue" Content="6" Grid.Row="1" Grid.Column="2" MouseLeftButtonUp="l_6_MouseLeftButtonUp"/>
+            <Label Name="l_7" Background="Blue" Content="7" Grid.Row="2" MouseLeftButtonUp="l_7_MouseLeftButtonUp"/>
+            <Label Name="l_8" Background="Blue" Content="8" Grid.Row="2" Grid.Column="1" MouseLeftButtonUp="l_8_MouseLeftButtonUp"/>
+            <Label Name="l_9" Background="Blue" Content="9" Grid.Row="2" Grid.Column="2" MouseLeftButtonUp="l_9_MouseLeftButtonUp"/>
+            <Label Name="l_BackSpace" Background="Blue" Content="清空" Grid.Row="3" MouseLeftButtonUp="l_BackSpace_MouseLeftButtonUp"/>
+            <Label Name="l_0" Background="Blue" Content="0" Grid.Row="3" Grid.Column="1" MouseLeftButtonUp="l_0_MouseLeftButtonUp"/>
+            <Label Name="l_Commit" Background="Blue" Content="确定" Grid.Row="3" Grid.Column="2" MouseLeftButtonUp="l_Commit_MouseLeftButtonUp"/>
+        </Grid>
+    </DockPanel>
+</Window>
